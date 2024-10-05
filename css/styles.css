@@ -290,7 +290,7 @@ p {
   padding: 5%;
 }
 
-.featured-phones h2 {
+featured-phones h2 {
   color: var(--text-dark);
   text-align: center;
   margin-bottom: 3%;
@@ -300,7 +300,7 @@ p {
   display: flex;
   justify-content: space-around;
   flex-wrap: nowrap;
-  gap: 5%;
+  gap: 3%;
 }
 
 .featured-phones .phone {
@@ -310,12 +310,27 @@ p {
   padding: 2%;
   text-align: center;
   width: calc(47%);
+  overflow: hidden;
+}
+
+.featured-phones .phone:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .featured-phones .phone img {
+  object-fit: cover;
   width: 100%;
-  height: auto;
+  height: 80vh;
   border-radius: 0.5em;
+  transition: transform 0.3s ease;
+}
+
+.featured-phones .phone img {
+  object-fit: cover;
+  width: 100%;
+  height: 80vh;
+  border-radius: 0.5em;
+  transition: transform 0.3s ease;
 }
 
 .featured-phones .phone h3 {
@@ -477,6 +492,7 @@ footer {
   background-color: var(--footer-bg);
   color: var(--footer-text);
   padding: 2%;
+  padding-block: 3%;
   display: flex;
   justify-content: space-between;
   align-items: center;
