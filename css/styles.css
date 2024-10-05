@@ -103,11 +103,11 @@ body {
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-size: 4rem;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 p {
@@ -177,7 +177,7 @@ p {
 
 .new-phones {
   padding: 0%;
-  padding-block: 5%;
+  padding-block: 10%;
   background-color: var(--bg);
 }
 
@@ -215,7 +215,7 @@ p {
 
 .phone-item:hover img {
   transform: scale(1.05);
-  filter: opacity(40%);
+  filter: opacity(35%);
 }
 
 .phone-item h3,
@@ -298,19 +298,31 @@ featured-phones h2 {
 
 .featured-phones .phone-grid {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: nowrap;
-  gap: 3%;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .featured-phones .phone {
+  width: calc(100% / 3 - 3%);
   background-color: var(--light);
   border: 0.1em solid var(--border);
   border-radius: 1em;
-  padding: 2%;
+  padding: 1%;
   text-align: center;
-  width: calc(47%);
   overflow: hidden;
+  margin-bottom: 3%;
+}
+
+@media (max-width: 768px) {
+  .featured-phones .phone {
+    width: calc(100% / 2 - 3%);
+  }
+}
+
+@media (max-width: 480px) {
+  .featured-phones .phone {
+    width: 100%;
+  }
 }
 
 .featured-phones .phone:hover {
@@ -320,15 +332,7 @@ featured-phones h2 {
 .featured-phones .phone img {
   object-fit: cover;
   width: 100%;
-  height: 80vh;
-  border-radius: 0.5em;
-  transition: transform 0.3s ease;
-}
-
-.featured-phones .phone img {
-  object-fit: cover;
-  width: 100%;
-  height: 80vh;
+  height: 50vh;
   border-radius: 0.5em;
   transition: transform 0.3s ease;
 }
