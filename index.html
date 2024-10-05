@@ -5,82 +5,78 @@
   <title>The Phone Marketplace</title>
   <meta name="keywords" content="phone, store, buy, sell">
   <meta name="description" content="Buy and sell your phones in our online store">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
   <header>
     <h1>The Phone Marketplace</h1>
-    <aside>
-      <pre>
-        <object data="ascii.txt"></object>
-      </pre>
-    </aside>
     <nav>
       <ul>
-        <li><a href="index.html">The Phone Marketplace</a></li>
         <li><a href="#">Catalog</a></li>
         <li><a href="#">Sell</a></li>
         <li><a href="#contacts">Contacts</a></li>
+        <li><a href="#">Cart</a></li>
       </ul>
     </nav>
-    <hr>
-    <br>
   </header>
 
   <main>
-    <article>
+    <section class="sale">
+      <div class="sale-banner">
+        <h3>Sharp Aquos wish4</h3>
+        <img src="images/aquos-wish-4-1.jpg" alt="Sale banner">
+        <button type="button" class="sale-button">Get now</button>
+      </div>
+    </section>
+    <section class="new-phones">
+      <h2>New Phones</h2>
+      <div class="phone-grid">
+        <div class="phone-item">
+          <img src="images/redmi-12-5g.webp" alt="New Phone 1">
+          <h3>Xiaomi Redmi 12 5G</h3>
+          <p>Affordable swiftness</p>
+          <button type="button" class="get-now-button">Get now</button>
+        </div>
+        <div class="phone-item">
+          <img src="images/galaxy-z-fold6.jpg" alt="New Phone 2">
+          <h3>Samsung Galaxy Z Fold6</h3>
+          <p>Unfold possibilities</p>
+          <button type="button" class="get-now-button">Get now</button>
+        </div>
+        <div class="phone-item">
+          <img src="images/aquos-wish-4-2.jpg" alt="New Phone 3">
+          <h3>Sharp Aquos Wish 4</h3>
+          <p>Refreshingly simple</p>
+          <button type="button" class="get-now-button">Get now</button>
+        </div>
+        <div class="phone-item">
+          <img src="images/pixel-9.webp" alt="New Phone 4">
+          <h3>Google Pixel 9</h3>
+          <p>Oxydizingly cutting-edge</p>
+          <button type="button" class="get-now-button">Get now</button>
+        </div>
+      </div>
+    </section>
+    <section class="featured-phones">
       <h2>Featured Phones</h2>
-      <div>
-        <h3>Kyocera 902KC</h3>
-        <div>
-          $399
+      <div class="phone-grid">
+        <div class="phone">
+          <img src="images/digno-902kc.jpeg" alt="Featured phone 1">
+          <h3>Kyocera 902KC</h3>
+          <p>A phone. Buy it.</p>
+          <p>$399</p>
         </div>
-        <ul>
-          <li>CPU: Qualcomm Snapdragon 210 (MSM8909) Quad-core 1.1GHz</li>
-          <li>GPU: Adreno 304</li>
-          <li>Memory : 8 GB ROM / 1 GB RAM</li>
-          <li>2G Network : GSM EDGE 850, 900, 1800, 1900 MHz</li>
-          <li>3G Network : UMTS HSDPA UMTS 900, 1700/2100, 2100 MHz</li>
-          <li>4G Network : FDD-LTE 900, 1700/ 2100, 1800, 2100 MHz (Band 1, 3, 4, 8)</li>
-          <li>Micro SD memory card supports up to 32 gigs</li>
-          <li>Battery Size : 1700 mAh</li>
-          <li>Main Display : 3.4 Inch qHD Display screen (540 x 964 pixels)</li>
-          <li>Sub Display : 1.0 Inch screen (128 x 36 pixels)</li>
-          <li>Bluetooth version 4.2</li>
-          <li>WiFi 802.11 b/g/n</li>
-          <li>Type-C USB Interface port</li>
-          <li>Music Format : MP3, AAC, AAC+, eAAC+, AMR, QCELP, WAV</li>
-          <li>Size : 112 x 51 x 17.9mm</li>
-          <li>Simcard Size : Nano</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Sharp Aquos 601SH</h3>
-        <div>
-          $599
+        <div class="phone">
+          <img src="images/aquos-601sh.jpg" alt="Featured phone 2">
+          <h3>Sharp Aquos 601SH</h3>
+          <p>A phone. Buy it.</p>
+          <p>$499</p>
         </div>
-        <ul>
-          <li>CPU: Qualcomm Snapdragon 210 (MSM8909) Quad-core 1.1GHz</li>
-          <li>GPU: Adreno 304</li>
-          <li>Memory : 8 GB ROM / 1 GB RAM</li>
-          <li>2G Network : GSM, EDGE 900, 1800, 1900MHz</li>
-          <li>3G Network : UMTS HSDPA UMTS 900, 2100 MHz</li>
-          <li>4G Network : FDD-LTE 900, 1800, 2100 MHz (Band 1, 3, 8)</li>
-          <li>Micro SD memory card supports up to 32GB</li>
-          <li>Battery Size : 1800mAh</li>
-          <li>Main Display : 3.4 Inch qHD Display screen (540 x 964 pixels)</li>
-          <li>Sub Display : 1.0 Inch OLED screen (128 x 36 pixels)</li>
-          <li>WiFi 802.11 b/g/n</li>
-          <li>Bluetooth version 4.1</li>
-          <li>GPS</li>
-          <li>Micro-USB Interface / Port</li>
-          <li>Music Format : MP3, AAC, AAC+, eAAC+, AMR, QCELP, WAV</li>
-          <li>Size : 113 x 51 x 16.7mm</li>
-          <li>Simcard Size : Nano</li>
-        </ul>
       </div>
-    </article>
-    <article>
+      <button type="button" class="view-all-button">View all</button>
+    </section>
+    <section class="reviews">
       <h2>Reviews</h2>
       <blockquote>
         <p>"Sold my old phone here and bought a new one here too!
@@ -97,27 +93,18 @@
           I am a happy customer"</p>
         <cite>Konstantin</cite>
       </blockquote>
-    </article>
-    <article>
-      <section>
-        <h2>About Us</h2>
-        <p>We are an online store dedicated to selling and buying mobile phones.
-          Our goal is to be a simple and secure platform for our users.</p>
-      </section>
-      <section>
-        <h2>Secret of Success</h2>
-        <p><strong>Formula:</strong>
-          <em>Quality</em> + <em>Reliability</em> +
-          <del>Overpriced</del> +
-          <ins>Fair prices</ins> = <strong>Happy clients!</strong>
-        </p>
-      </section>
-    </article>
+    </section>
+    <section class="newsletter">
+      <h2>Subscribe to the newsletter</h2>
+      <p>Be the first to know about our new and exclusive offers.</p>
+      <form action="#" method="post" class="newsletter-form">
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <button type="submit">⇨</button>
+      </form>
+    </section>
   </main>
 
   <footer>
-    <br>
-    <hr>
     <section id="contacts">
       <p>Email: info@thephonemarketplace.com</p>
       <p>Phone: +1 123 456-7890</p>

@@ -1,0 +1,516 @@
+:root {
+  --bg: #ddd;
+  --border: #ddd;
+  --text: #444;
+  --text-dark: #222;
+  --text-light: #555;
+  --light: #eee;
+  --newsletter-bg: #bbb;
+  --newsletter-border: #ccc;
+  --footer-bg: #222;
+  --footer-text: #ddd;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  backdrop-filter: blur(15px);
+  align-items: center;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  margin-left: 10%;
+  color: #333;
+}
+
+header nav {
+  margin: 0;
+  margin-right: 5%;
+}
+
+@media (max-width: 768px) {
+  header {
+    position: static;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul li {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  nav ul li {
+    font-size: 0.75em;
+  }
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 45px;
+}
+
+nav ul li {
+  font-size: 0.9em;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-light);
+  padding-bottom: 5px;
+}
+
+nav ul li a:hover {
+  color: var(--text);
+  border-bottom: 1px solid var(--text-light);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-size: 1rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.sale {
+  position: relative;
+  overflow: hidden;
+}
+
+.sale-banner img {
+  width: 100vw;
+  height: auto;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sale h3 {
+  position: absolute;
+  bottom: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--text-dark);
+  font-size: 1.5em;
+  margin: 0;
+  z-index: 1;
+}
+
+.sale-button {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: none;
+  border: 1px solid var(--text-dark);
+  color: var(--text-dark);
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  z-index: 1;
+}
+
+.sale-button:hover {
+  background-color: var(--text-dark);
+  color: var(--bg);
+}
+
+@media (max-width: 768px) {
+  .sale-banner img {
+    height: 100%;
+    width: auto;
+  }
+
+  .sale-button {
+    bottom: 25%;
+  }
+}
+
+@media (max-width: 480px) {
+  .sale-banner img {
+    height: 70%;
+  }
+}
+
+.new-phones {
+  padding: 0%;
+  padding-block: 5%;
+  background-color: var(--bg);
+}
+
+.new-phones h2 {
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: 3%;
+  text-overflow: ellipsis;
+}
+
+.phone-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0;
+}
+
+.phone-item {
+  position: relative;
+  width: calc(100% / 4);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: none;
+}
+
+.phone-item img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+  transition: transform 0.3s ease;
+}
+
+.phone-item:hover img {
+  transform: scale(1.05);
+  filter: opacity(40%);
+}
+
+.phone-item h3,
+.phone-item p {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.phone-item h3 {
+  color: var(--text-dark);
+  bottom: 40%;
+  font-size: 1.2em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 90%;
+}
+
+.phone-item p {
+  color: var(--text);
+  bottom: 30%;
+  font-size: 0.9em;
+}
+
+.phone-item:hover h3,
+.phone-item:hover p {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .phone-item {
+    width: calc(100% / 2);
+  }
+}
+
+@media (max-width: 480px) {
+  .phone-item {
+    width: 100%;
+  }
+}
+
+.get-now-button {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%) scale(0.9);
+  background: none;
+  color: var(--text);
+  padding: 10px 15px;
+  border: 1px solid var(--text-dark);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.phone-item:hover .get-now-button {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+.get-now-button:hover {
+  background-color: var(--text);
+  color: var(--bg);
+}
+
+.featured-phones {
+  padding: 5%;
+}
+
+.featured-phones h2 {
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: 3%;
+}
+
+.featured-phones .phone-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  gap: 5%;
+}
+
+.featured-phones .phone {
+  background-color: var(--light);
+  border: 0.1em solid var(--border);
+  border-radius: 1em;
+  padding: 2%;
+  text-align: center;
+  width: calc(47%);
+}
+
+.featured-phones .phone img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5em;
+}
+
+.featured-phones .phone h3 {
+  margin-top: 1em;
+  font-size: 1.2em;
+  color: var(--text-dark);
+}
+
+.featured-phones .phone p {
+  margin: 1em 0;
+  font-size: 1.1em;
+  color: var(--text-light);
+}
+
+.view-all-button {
+  display: block;
+  margin: 2em auto;
+  padding: 1% 2%;
+  border: 1px solid var(--text-dark);
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  background-color: var(--bg);
+  color: var(--text-dark);
+}
+
+.view-all-button:hover {
+  background-color: var(--text-dark);
+  color: var(--bg);
+}
+
+
+@media (max-width: 768px) {
+  .featured-phones {
+    padding: 0;
+  }
+
+  .featured-phones .phone-grid {
+    flex-wrap: wrap;
+  }
+
+  .featured-phones .phone {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .featured-phones .phone h3 {
+    font-size: 1.1em;
+  }
+
+  .featured-phones .phone p {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  .featured-phones .phone {
+    width: 90%;
+  }
+}
+
+.reviews {
+  padding: 5%;
+  background-color: var(--bg);
+}
+
+.reviews h2 {
+  text-align: center;
+  margin-bottom: 3%;
+}
+
+.reviews blockquote {
+  background-color: var(--light);
+  padding: 2%;
+  margin: 3% auto;
+  max-width: 80%;
+  border-left: 0.5em solid var(--text);
+  color: var(--text-dark);
+}
+
+.reviews cite {
+  display: block;
+  margin-top: 1em;
+  text-align: right;
+  color: var(--text-light);
+}
+
+@media (max-width: 768px) {
+  .reviews {
+    padding: 0;
+  }
+
+  .reviews p {
+    font-size: 0.9rem;
+  }
+
+  .reviews cite {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  .reviews h2 {
+    font-size: 1.3rem;
+  }
+
+  .reviews blockquote {
+    font-size: 0.9em;
+  }
+}
+
+.newsletter {
+  padding: 0.625em;
+  text-align: center;
+  background: linear-gradient(to top, var(--newsletter-bg), var(--bg) 50%), var(--light);
+  padding-block: 10%;
+}
+
+.newsletter h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.625em;
+}
+
+.newsletter p {
+  font-size: 1em;
+  margin-bottom: 1.25em;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 0.625em;
+  font-size: 1em;
+  width: 15.625em;
+  border: 0.0625em solid var(--newsletter-border);
+  border-radius: 0.3125em;
+}
+
+.newsletter-form button {
+  padding: 0.625em 0.9375em;
+  font-size: 1em;
+  background-color: var(--text);
+  color: var(--bg);
+  border: none;
+  border-radius: 0.3125em;
+  margin-left: 0.625em;
+  cursor: pointer;
+}
+
+.newsletter-form button:hover {
+  background-color: var(--text-light);
+}
+
+footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  padding: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer #contacts p {
+  margin-bottom: 1em;
+}
+
+footer section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  footer section {
+    padding-block: 5%;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  footer p {
+    text-align: left;
+    width: 100%;
+  }
+}
