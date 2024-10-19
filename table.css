@@ -17,41 +17,39 @@ h2 {
   text-align: center;
 }
 
-table {
+.grid-table {
   display: grid;
   width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.1%;
   border-collapse: collapse;
 }
 
-thead {
-  display: contents;
-}
-
-tbody {
-  display: contents;
-}
-
-th,
-td {
-  padding: 15px;
-  text-align: center;
-  width: 20vw;
-}
-
-tbody tr:nth-child(even) td {
-  background-color: #f9f9f9;
-}
-
-tbody tr:nth-child(odd) td {
-  background-color: #e6e6e6;
-}
-
-tbody tr:hover td {
-  background-color: #d1e7fd;
-}
-
-th {
-  background-color: #4CAF50;
+.header {
+  background-color: #4a5;
   color: white;
   font-weight: bold;
+  padding: 6%;
+  text-align: center;
+}
+
+.cell {
+  padding: 3vh;
+  text-align: center;
+}
+
+.cell:nth-child(3n+1),
+.cell:nth-child(3n+2),
+.cell:nth-child(3n+3) {
+  background-color: #eee;
+}
+
+.cell:nth-child(6n+1),
+.cell:nth-child(6n+2),
+.cell:nth-child(6n+3) {
+  background-color: #ddd;
+}
+
+.grid-table>.cell:hover {
+  background-color: #def;
 }
