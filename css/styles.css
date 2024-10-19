@@ -39,39 +39,6 @@ header nav {
   margin-right: 5%;
 }
 
-@media (max-width: 768px) {
-  header {
-    position: static;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-  }
-
-  header h1 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav ul li {
-    font-size: 0.8em;
-  }
-}
-
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 1.2rem;
-  }
-
-  nav ul li {
-    font-size: 0.75em;
-  }
-}
-
 nav ul {
   list-style: none;
   display: flex;
@@ -158,23 +125,6 @@ p {
   color: var(--bg);
 }
 
-@media (max-width: 768px) {
-  .sale-banner img {
-    height: 100%;
-    width: auto;
-  }
-
-  .sale-button {
-    bottom: 25%;
-  }
-}
-
-@media (max-width: 480px) {
-  .sale-banner img {
-    height: 70%;
-  }
-}
-
 .new-phones {
   padding: 0%;
   padding-block: 10%;
@@ -250,18 +200,6 @@ p {
   opacity: 1;
 }
 
-@media (max-width: 768px) {
-  .phone-item {
-    width: calc(100% / 2);
-  }
-}
-
-@media (max-width: 480px) {
-  .phone-item {
-    width: 100%;
-  }
-}
-
 .get-now-button {
   position: absolute;
   bottom: 15%;
@@ -313,18 +251,6 @@ featured-phones h2 {
   margin-bottom: 3%;
 }
 
-@media (max-width: 768px) {
-  .featured-phones .phone {
-    width: calc(100% / 2 - 3%);
-  }
-}
-
-@media (max-width: 480px) {
-  .featured-phones .phone {
-    width: 100%;
-  }
-}
-
 .featured-phones .phone:hover {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
@@ -367,35 +293,6 @@ featured-phones h2 {
 }
 
 
-@media (max-width: 768px) {
-  .featured-phones {
-    padding: 0;
-  }
-
-  .featured-phones .phone-grid {
-    flex-wrap: wrap;
-  }
-
-  .featured-phones .phone {
-    width: 80%;
-    margin: 0 auto;
-  }
-
-  .featured-phones .phone h3 {
-    font-size: 1.1em;
-  }
-
-  .featured-phones .phone p {
-    font-size: 0.9em;
-  }
-}
-
-@media (max-width: 480px) {
-  .featured-phones .phone {
-    width: 90%;
-  }
-}
-
 .reviews {
   padding: 5%;
   background-color: var(--bg);
@@ -420,30 +317,6 @@ featured-phones h2 {
   margin-top: 1em;
   text-align: right;
   color: var(--text-light);
-}
-
-@media (max-width: 768px) {
-  .reviews {
-    padding: 0;
-  }
-
-  .reviews p {
-    font-size: 0.9rem;
-  }
-
-  .reviews cite {
-    font-size: 0.9em;
-  }
-}
-
-@media (max-width: 480px) {
-  .reviews h2 {
-    font-size: 1.3rem;
-  }
-
-  .reviews blockquote {
-    font-size: 0.9em;
-  }
 }
 
 .newsletter {
@@ -517,7 +390,129 @@ footer section {
   font-size: 0.9em;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
+  .reviews h2 {
+    font-size: 1.3rem;
+  }
+
+  .reviews blockquote {
+    font-size: 0.9em;
+  }
+
+  .sale-banner img {
+    height: 70%;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  nav ul li {
+    font-size: 0.75em;
+  }
+
+  .featured-phones .phone {
+    width: 90%;
+  }
+
+  .featured-phones .phone {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) or (orientation: portrait) {
+  .sale-banner img {
+    height: 100%;
+    width: auto;
+  }
+
+  .phone-item h3 {
+    font-size: 3em;
+  }
+
+  .phone-item p {
+    font-size: 2.5em;
+  }
+
+  .get-now-button {
+    font-size: 2.5em;
+  }
+
+  h2 {
+    font-size: 6em;
+    margin-left: 4%;
+  }
+
+  .newsletter h2 {
+    font-size: 4em;
+  }
+
+  .newsletter-form input[type="email"] {
+    font-size: 2em;
+  }
+
+  .newsletter-form button {
+    font-size: 2em;
+  }
+
+  .sale-button {
+    bottom: 25%;
+  }
+
+  .phone-item {
+    width: calc(100% / 1);
+  }
+
+  .featured-phones .phone {
+    width: calc(100% / 2 - 3%);
+  }
+
+  .featured-phones {
+    padding: 0;
+  }
+
+  .featured-phones .phone-grid {
+    flex-wrap: wrap;
+  }
+
+  .featured-phones .phone {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .featured-phones .phone h3 {
+    font-size: 3em;
+  }
+
+  .featured-phones .phone p {
+    font-size: 2.4em;
+  }
+
+  .reviews {
+    padding: 0;
+  }
+
+  .reviews p {
+    margin: 2%;
+    font-size: 0.8em;
+  }
+
+  .reviews cite {
+    font-size: 0.7em;
+  }
+
+  .sale h3 {
+    font-size: 4em;
+  }
+
+  footer #contacts p {
+    font-size: 2.1em;
+  }
+
+  footer p {
+    font-size: 2em;
+  }
+
   footer {
     flex-direction: column;
     align-items: flex-start;
@@ -532,5 +527,158 @@ footer section {
   footer p {
     text-align: left;
     width: 100%;
+  }
+
+  header {
+    position: static;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 6rem;
+    margin-bottom: 10px;
+    padding-block: 10%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul li {
+    font-size: 3em;
+    padding-block: 15%;
+  }
+
+  .sale-button {
+    font-size: 3em;
+  }
+}
+
+
+@media (min-width: 1440px) {
+  .sale h3 {
+    font-size: 5rem;
+  }
+
+  .new-phones h2 {
+    font-size: 8rem;
+  }
+
+  .phone-item:hover h3,
+  .phone-item:hover p {
+    font-size: 3rem;
+  }
+
+  .phone-item:hover .get-now-button {
+    font-size: 2.5rem;
+  }
+
+  .reviews h2 {
+    font-size: 2.5rem;
+  }
+
+  .reviews blockquote {
+    font-size: 1.2em;
+  }
+
+  .sale-banner img {
+    height: 100%;
+    width: auto;
+  }
+
+  header h1 {
+    font-size: 5rem;
+  }
+
+  header {
+    padding: 1%;
+  }
+
+  .reviews h2 {
+    font-size: 8em;
+  }
+
+  h2 {
+    font-size: 8em;
+  }
+
+  .featured-phones .phone p {
+    font-size: 2.5em;
+  }
+
+  nav ul li a {
+    font-size: 2em;
+  }
+
+  .featured-phones .phone h3 {
+    font-size: 3em;
+  }
+
+  nav ul li {
+    font-size: 1.2em;
+  }
+
+  .phone-item {
+    width: calc(100% / 3);
+  }
+
+  .featured-phones .phone {
+    width: calc(100% / 3 - 3%);
+  }
+
+  .reviews {
+    padding: 2rem;
+  }
+
+  .reviews p {
+    font-size: 2.5rem;
+  }
+
+  .view-all-button {
+    font-size: 3em;
+  }
+
+  .reviews cite {
+    font-size: 2em;
+  }
+
+  .newsletter h2 {
+    font-size: 8em;
+  }
+
+  .newsletter p {
+    font-size: 4em;
+  }
+
+  .newsletter-form input[type="email"] {
+    width: 20em;
+    font-size: 3em;
+  }
+
+  .newsletter-form button {
+    font-size: 3em;
+  }
+
+  footer section {
+    padding-block: 3%;
+  }
+
+  footer p {
+    font-size: 3em;
+  }
+
+  nav ul {
+    flex-direction: row;
+  }
+
+  nav ul li {
+    font-size: 1.2em;
+  }
+
+  .sale-button {
+    font-size: 3em;
   }
 }
