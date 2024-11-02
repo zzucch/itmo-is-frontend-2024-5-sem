@@ -1,684 +1,688 @@
 :root {
-  --bg: #ddd;
-  --border: #ddd;
-  --text: #444;
-  --text-dark: #222;
-  --text-light: #555;
-  --light: #eee;
-  --newsletter-bg: #bbb;
-  --newsletter-border: #ccc;
-  --footer-bg: #222;
-  --footer-text: #ddd;
+    --bg: #ddd;
+    --border: #ddd;
+    --text: #444;
+    --text-dark: #222;
+    --text-light: #555;
+    --light: #eee;
+    --newsletter-bg: #bbb;
+    --newsletter-border: #ccc;
+    --footer-bg: #222;
+    --footer-text: #ddd;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 header {
-  position: sticky;
-  top: 0;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  backdrop-filter: blur(15px);
-  align-items: center;
-  color: var(--text);
-  border-bottom: 1px solid var(--border);
-  z-index: 1000;
+    position: sticky;
+    top: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    backdrop-filter: blur(15px);
+    align-items: center;
+    color: var(--text);
+    border-bottom: 1px solid var(--border);
+    z-index: 1000;
 }
 
 header h1 {
-  margin: 0;
-  margin-left: 10%;
-  color: #333;
+    margin: 0;
+    margin-left: 10%;
+    color: #333;
 }
 
 header nav {
-  margin: 0;
-  margin-right: 5%;
+    margin: 0;
+    margin-right: 5%;
 }
 
 nav ul {
-  list-style: none;
-  display: flex;
-  gap: 45px;
+    list-style: none;
+    display: flex;
+    gap: 45px;
 }
 
 nav ul li {
-  font-size: 0.9em;
+    font-size: 0.9em;
 }
 
 nav ul li a {
-  text-decoration: none;
-  color: var(--text-light);
-  padding-bottom: 5px;
+    text-decoration: none;
+    color: var(--text-light);
+    padding-bottom: 5px;
 }
 
 nav ul li a:hover {
-  color: var(--text);
-  border-bottom: 1px solid var(--text-light);
+    color: var(--text);
+    border-bottom: 1px solid var(--text-light);
 }
 
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: var(--bg);
-  color: var(--text);
-  font-size: 1rem;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+    color: var(--text);
+    font-size: 1rem;
 }
 
 h2 {
-  font-size: 4rem;
+    font-size: 4rem;
 }
 
 h3 {
-  font-size: 2rem;
+    font-size: 2rem;
 }
 
 p {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 .sale {
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    overflow: hidden;
 }
 
 .sale-banner img {
-  width: 100vw;
-  height: auto;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+    width: 100vw;
+    height: auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .sale h3 {
-  position: absolute;
-  bottom: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: var(--text-dark);
-  font-size: 1.5em;
-  margin: 0;
-  z-index: 1;
+    position: absolute;
+    bottom: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--text-dark);
+    font-size: 1.5em;
+    margin: 0;
+    z-index: 1;
 }
 
 .sale-button {
-  position: absolute;
-  bottom: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: none;
-  border: 1px solid var(--text-dark);
-  color: var(--text-dark);
-  padding: 10px 20px;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-  z-index: 1;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: none;
+    border: 1px solid var(--text-dark);
+    color: var(--text-dark);
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    z-index: 1;
 }
 
 .sale-button:hover {
-  background-color: var(--text-dark);
-  color: var(--bg);
+    background-color: var(--text-dark);
+    color: var(--bg);
 }
 
 .new-phones {
-  padding: 0%;
-  padding-block: 10%;
-  background-color: var(--bg);
+    padding: 0%;
+    padding-block: 10%;
+    background-color: var(--bg);
 }
 
 .new-phones h2 {
-  color: var(--text-dark);
-  text-align: center;
-  margin-bottom: 3%;
-  text-overflow: ellipsis;
+    color: var(--text-dark);
+    text-align: center;
+    margin-bottom: 3%;
+    text-overflow: ellipsis;
 }
 
 .phone-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0;
 }
 
 .phone-item {
-  position: relative;
-  width: calc(100% / 4);
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  border: none;
+    position: relative;
+    width: calc(100% / 4);
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: none;
 }
 
 .phone-item img {
-  width: 100%;
-  height: 50vh;
-  object-fit: cover;
-  display: block;
-  border-radius: 0;
-  transition: transform 0.3s ease;
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
+    transition: transform 0.3s ease;
 }
 
 .phone-item:hover img {
-  transform: scale(1.05);
-  filter: opacity(35%);
+    transform: scale(1.05);
+    filter: opacity(35%);
 }
 
 .phone-item h3,
 .phone-item p {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 0;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .phone-item h3 {
-  color: var(--text-dark);
-  bottom: 40%;
-  font-size: 1.2em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 90%;
+    color: var(--text-dark);
+    bottom: 40%;
+    font-size: 1.2em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90%;
 }
 
 .phone-item p {
-  color: var(--text);
-  bottom: 30%;
-  font-size: 0.9em;
+    color: var(--text);
+    bottom: 30%;
+    font-size: 0.9em;
 }
 
 .phone-item:hover h3,
 .phone-item:hover p {
-  opacity: 1;
+    opacity: 1;
 }
 
 .get-now-button {
-  position: absolute;
-  bottom: 15%;
-  left: 50%;
-  transform: translateX(-50%) scale(0.9);
-  background: none;
-  color: var(--text);
-  padding: 10px 15px;
-  border: 1px solid var(--text-dark);
-  cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%) scale(0.9);
+    background: none;
+    color: var(--text);
+    padding: 10px 15px;
+    border: 1px solid var(--text-dark);
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .phone-item:hover .get-now-button {
-  opacity: 1;
-  transform: translateX(-50%) scale(1);
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
 }
 
 .get-now-button:hover {
-  background-color: var(--text);
-  color: var(--bg);
+    background-color: var(--text);
+    color: var(--bg);
 }
 
 .featured-phones {
-  padding: 5%;
+    padding: 5%;
 }
 
 featured-phones h2 {
-  color: var(--text-dark);
-  text-align: center;
-  margin-bottom: 3%;
+    color: var(--text-dark);
+    text-align: center;
+    margin-bottom: 3%;
 }
 
 .featured-phones .phone-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .featured-phones .phone {
-  width: calc(100% / 3 - 3%);
-  background-color: var(--light);
-  border: 0.1em solid var(--border);
-  border-radius: 1em;
-  padding: 1%;
-  text-align: center;
-  overflow: hidden;
-  margin-bottom: 3%;
+    width: calc(100% / 3 - 3%);
+    background-color: var(--light);
+    border: 0.1em solid var(--border);
+    border-radius: 1em;
+    padding: 1%;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 3%;
 }
 
 .featured-phones .phone:hover {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .featured-phones .phone img {
-  object-fit: cover;
-  width: 100%;
-  height: 50vh;
-  border-radius: 0.5em;
-  transition: transform 0.3s ease;
+    object-fit: cover;
+    width: 100%;
+    height: 50vh;
+    border-radius: 0.5em;
+    transition: transform 0.3s ease;
 }
 
 .featured-phones .phone h3 {
-  margin-top: 1em;
-  font-size: 1.2em;
-  color: var(--text-dark);
+    margin-top: 1em;
+    font-size: 1.2em;
+    color: var(--text-dark);
 }
 
 .featured-phones .phone p {
-  margin: 1em 0;
-  font-size: 1.1em;
-  color: var(--text-light);
+    margin: 1em 0;
+    font-size: 1.1em;
+    color: var(--text-light);
 }
 
 .view-all-button {
-  display: block;
-  margin: 2em auto;
-  padding: 1% 2%;
-  border: 1px solid var(--text-dark);
-  font-size: 1em;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-  background-color: var(--bg);
-  color: var(--text-dark);
+    display: block;
+    margin: 2em auto;
+    padding: 1% 2%;
+    border: 1px solid var(--text-dark);
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: var(--bg);
+    color: var(--text-dark);
 }
 
 .view-all-button:hover {
-  background-color: var(--text-dark);
-  color: var(--bg);
+    background-color: var(--text-dark);
+    color: var(--bg);
 }
 
 
 .reviews {
-  padding: 5%;
-  background-color: var(--bg);
+    padding: 5%;
+    background-color: var(--bg);
 }
 
 .reviews h2 {
-  text-align: center;
-  margin-bottom: 3%;
+    text-align: center;
+    margin-bottom: 3%;
 }
 
 .reviews blockquote {
-  background-color: var(--light);
-  padding: 2%;
-  margin: 3% auto;
-  max-width: 80%;
-  border-left: 0.5em solid var(--text);
-  color: var(--text-dark);
+    background-color: var(--light);
+    padding: 2%;
+    margin: 3% auto;
+    max-width: 80%;
+    border-left: 0.5em solid var(--text);
+    color: var(--text-dark);
 }
 
 .reviews cite {
-  display: block;
-  margin-top: 1em;
-  text-align: right;
-  color: var(--text-light);
+    display: block;
+    margin-top: 1em;
+    text-align: right;
+    color: var(--text-light);
 }
 
 .newsletter {
-  padding: 0.625em;
-  text-align: center;
-  background: linear-gradient(to top, var(--newsletter-bg), var(--bg) 50%), var(--light);
-  padding-block: 10%;
+    padding: 0.625em;
+    text-align: center;
+    background: linear-gradient(to top, var(--newsletter-bg), var(--bg) 50%), var(--light);
+    padding-block: 10%;
 }
 
 .newsletter h2 {
-  font-size: 1.5em;
-  margin-bottom: 0.625em;
+    font-size: 1.5em;
+    margin-bottom: 0.625em;
 }
 
 .newsletter p {
-  font-size: 1em;
-  margin-bottom: 1.25em;
+    font-size: 1em;
+    margin-bottom: 1.25em;
 }
 
 .newsletter-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .newsletter-form input[type="email"] {
-  padding: 0.625em;
-  font-size: 1em;
-  width: 15.625em;
-  border: 0.0625em solid var(--newsletter-border);
-  border-radius: 0.3125em;
+    padding: 0.625em;
+    font-size: 1em;
+    width: 15.625em;
+    border: 0.0625em solid var(--newsletter-border);
+    border-radius: 0.3125em;
 }
 
 .newsletter-form button {
-  padding: 0.625em 0.9375em;
-  font-size: 1em;
-  background-color: var(--text);
-  color: var(--bg);
-  border: none;
-  border-radius: 0.3125em;
-  margin-left: 0.625em;
-  cursor: pointer;
+    padding: 0.625em 0.9375em;
+    font-size: 1em;
+    background-color: var(--text);
+    color: var(--bg);
+    border: none;
+    border-radius: 0.3125em;
+    margin-left: 0.625em;
+    cursor: pointer;
 }
 
 .newsletter-form button:hover {
-  background-color: var(--text-light);
+    background-color: var(--text-light);
 }
 
 footer {
-  background-color: var(--footer-bg);
-  color: var(--footer-text);
-  padding: 2%;
-  padding-block: 3%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 2%;
+    padding-block: 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 footer p {
-  margin: 0;
+    margin: 0;
 }
 
 footer #contacts p {
-  margin-bottom: 1em;
+    margin-bottom: 1em;
 }
 
 footer section {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-  font-size: 0.9em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    font-size: 0.9em;
 }
 
 @media (max-width: 480px) {
-  .reviews h2 {
-    font-size: 1.3rem;
-  }
+    .reviews h2 {
+        font-size: 1.3rem;
+    }
 
-  .reviews blockquote {
-    font-size: 0.9em;
-  }
+    .reviews blockquote {
+        font-size: 0.9em;
+    }
 
-  .sale-banner img {
-    height: 70%;
-  }
+    .sale-banner img {
+        height: 70%;
+    }
 
-  header h1 {
-    font-size: 1.2rem;
-  }
+    header h1 {
+        font-size: 1.2rem;
+    }
 
-  nav ul li {
-    font-size: 0.75em;
-  }
+    nav ul li {
+        font-size: 0.75em;
+    }
 
-  .featured-phones .phone {
-    width: 90%;
-  }
+    .featured-phones .phone {
+        width: 90%;
+    }
 
-  .featured-phones .phone {
-    width: 100%;
-  }
+    .featured-phones .phone {
+        width: 100%;
+    }
 }
 
 @media (max-width: 768px) or (orientation: portrait) {
-  .sale-banner img {
-    height: 100%;
-    width: auto;
-  }
+    .sale-banner img {
+        height: 100%;
+        width: auto;
+    }
 
-  .phone-item h3 {
-    font-size: 3em;
-  }
+    .phone-item h3 {
+        font-size: 3em;
+    }
 
-  .phone-item p {
-    font-size: 2.5em;
-  }
+    .phone-item p {
+        font-size: 2.5em;
+    }
 
-  .get-now-button {
-    font-size: 2.5em;
-  }
+    .get-now-button {
+        font-size: 2.5em;
+    }
 
-  h2 {
-    font-size: 6em;
-    margin-left: 4%;
-  }
+    h2 {
+        font-size: 6em;
+        margin-left: 4%;
+    }
 
-  .newsletter h2 {
-    font-size: 4em;
-  }
+    .newsletter h2 {
+        font-size: 4em;
+    }
 
-  .newsletter-form input[type="email"] {
-    font-size: 2em;
-  }
+    .newsletter-form input[type="email"] {
+        font-size: 2em;
+    }
 
-  .newsletter-form button {
-    font-size: 2em;
-  }
+    .newsletter-form button {
+        font-size: 2em;
+    }
 
-  .sale-button {
-    bottom: 25%;
-  }
+    .sale-button {
+        bottom: 25%;
+    }
 
-  .phone-item {
-    width: calc(100% / 1);
-  }
+    .phone-item {
+        width: calc(100% / 1);
+    }
 
-  .featured-phones .phone {
-    width: calc(100% / 2 - 3%);
-  }
+    .featured-phones .phone {
+        width: calc(100% / 2 - 3%);
+    }
 
-  .featured-phones {
-    padding: 0;
-  }
+    .featured-phones {
+        padding: 0;
+    }
 
-  .featured-phones .phone-grid {
-    flex-wrap: wrap;
-  }
+    .featured-phones .phone-grid {
+        flex-wrap: wrap;
+    }
 
-  .featured-phones .phone {
-    width: 80%;
-    margin: 0 auto;
-  }
+    .featured-phones .phone {
+        width: 80%;
+        margin: 0 auto;
+    }
 
-  .featured-phones .phone h3 {
-    font-size: 3em;
-  }
+    .featured-phones .phone h3 {
+        font-size: 3em;
+    }
 
-  .featured-phones .phone p {
-    font-size: 2.4em;
-  }
+    .featured-phones .phone p {
+        font-size: 2.4em;
+    }
 
-  .reviews {
-    padding: 0;
-  }
+    .reviews {
+        padding: 0;
+    }
 
-  .reviews p {
-    margin: 2%;
-    font-size: 0.8em;
-  }
+    .reviews p {
+        margin: 2%;
+        font-size: 0.8em;
+    }
 
-  .reviews cite {
-    font-size: 0.7em;
-  }
+    .reviews cite {
+        font-size: 0.7em;
+    }
 
-  .sale h3 {
-    font-size: 4em;
-  }
+    .sale h3 {
+        font-size: 4em;
+    }
 
-  footer #contacts p {
-    font-size: 2.1em;
-  }
+    footer #contacts p {
+        font-size: 2.1em;
+    }
 
-  footer p {
-    font-size: 2em;
-  }
+    footer p {
+        font-size: 2em;
+    }
 
-  footer {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-  footer section {
-    padding-block: 5%;
-    align-items: flex-start;
-    width: 100%;
-  }
+    footer section {
+        padding-block: 5%;
+        align-items: flex-start;
+        width: 100%;
+    }
 
-  footer p {
-    text-align: left;
-    width: 100%;
-  }
+    footer p {
+        text-align: left;
+        width: 100%;
+    }
 
-  header {
-    position: static;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-  }
+    header {
+        position: static;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
 
-  header h1 {
-    font-size: 6rem;
-    margin-bottom: 10px;
-    padding-block: 10%;
-  }
+    header h1 {
+        font-size: 6rem;
+        margin-bottom: 10px;
+        padding-block: 10%;
+    }
 
-  nav ul {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-  nav ul li {
-    font-size: 3em;
-    padding-block: 15%;
-  }
+    nav ul li {
+        font-size: 3em;
+        padding-block: 15%;
+    }
 
-  .sale-button {
-    font-size: 3em;
-  }
+    .sale-button {
+        font-size: 3em;
+    }
 }
 
 
 @media (min-width: 2048px) {
-  .sale h3 {
-    font-size: 5rem;
-  }
+    .sale h3 {
+        font-size: 5rem;
+    }
 
-  .new-phones h2 {
-    font-size: 8rem;
-  }
+    .new-phones h2 {
+        font-size: 8rem;
+    }
 
-  .phone-item:hover h3,
-  .phone-item:hover p {
-    font-size: 3rem;
-  }
+    .phone-item:hover h3,
+    .phone-item:hover p {
+        font-size: 3rem;
+    }
 
-  .phone-item:hover .get-now-button {
-    font-size: 2.5rem;
-  }
+    .phone-item:hover .get-now-button {
+        font-size: 2.5rem;
+    }
 
-  .reviews h2 {
-    font-size: 2.5rem;
-  }
+    .reviews h2 {
+        font-size: 2.5rem;
+    }
 
-  .reviews blockquote {
-    font-size: 1.2em;
-  }
+    .reviews blockquote {
+        font-size: 1.2em;
+    }
 
-  .sale-banner img {
-    height: 100%;
-    width: auto;
-  }
+    .sale-banner img {
+        height: 100%;
+        width: auto;
+    }
 
-  header h1 {
-    font-size: 5rem;
-  }
+    header h1 {
+        font-size: 5rem;
+    }
 
-  header {
-    padding: 1%;
-  }
+    header {
+        padding: 1%;
+    }
 
-  .reviews h2 {
-    font-size: 8em;
-  }
+    .reviews h2 {
+        font-size: 8em;
+    }
 
-  h2 {
-    font-size: 8em;
-  }
+    h2 {
+        font-size: 8em;
+    }
 
-  .featured-phones .phone p {
-    font-size: 2.5em;
-  }
+    .featured-phones .phone p {
+        font-size: 2.5em;
+    }
 
-  nav ul li a {
-    font-size: 2em;
-  }
+    nav ul li a {
+        font-size: 2em;
+    }
 
-  .featured-phones .phone h3 {
-    font-size: 3em;
-  }
+    .featured-phones .phone h3 {
+        font-size: 3em;
+    }
 
-  nav ul li {
-    font-size: 1.2em;
-  }
+    nav ul li {
+        font-size: 1.2em;
+    }
 
-  .phone-item {
-    width: calc(100% / 3);
-  }
+    .phone-item {
+        width: calc(100% / 3);
+    }
 
-  .featured-phones .phone {
-    width: calc(100% / 3 - 3%);
-  }
+    .featured-phones .phone {
+        width: calc(100% / 3 - 3%);
+    }
 
-  .reviews {
-    padding: 2rem;
-  }
+    .reviews {
+        padding: 2rem;
+    }
 
-  .reviews p {
-    font-size: 2.5rem;
-  }
+    .reviews p {
+        font-size: 2.5rem;
+    }
 
-  .view-all-button {
-    font-size: 3em;
-  }
+    .view-all-button {
+        font-size: 3em;
+    }
 
-  .reviews cite {
-    font-size: 2em;
-  }
+    .reviews cite {
+        font-size: 2em;
+    }
 
-  .newsletter h2 {
-    font-size: 8em;
-  }
+    .newsletter h2 {
+        font-size: 8em;
+    }
 
-  .newsletter p {
-    font-size: 4em;
-  }
+    .newsletter p {
+        font-size: 4em;
+    }
 
-  .newsletter-form input[type="email"] {
-    width: 20em;
-    font-size: 3em;
-  }
+    .newsletter-form input[type="email"] {
+        width: 20em;
+        font-size: 3em;
+    }
 
-  .newsletter-form button {
-    font-size: 3em;
-  }
+    .newsletter-form button {
+        font-size: 3em;
+    }
 
-  footer section {
-    padding-block: 3%;
-  }
+    footer section {
+        padding-block: 3%;
+    }
 
-  footer p {
-    font-size: 3em;
-  }
+    footer p {
+        font-size: 3em;
+    }
 
-  nav ul {
-    flex-direction: row;
-  }
+    nav ul {
+        flex-direction: row;
+    }
 
-  nav ul li {
-    font-size: 1.2em;
-  }
+    nav ul li {
+        font-size: 1.2em;
+    }
 
-  .sale-button {
-    font-size: 3em;
-  }
+    .sale-button {
+        font-size: 3em;
+    }
+}
+
+.active {
+    font-weight: bold;
 }
