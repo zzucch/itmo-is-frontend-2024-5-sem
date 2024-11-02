@@ -686,3 +686,20 @@ footer section {
 .active {
     font-weight: bold;
 }
+
+.goto-top-button {
+    background-color: var(--text);
+    color: var(--bg);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0.3125em;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    z-index: 1100;
+}
+
+.goto-top-button:hover {
+    background-color: var(--text-dark);
+    color: var(--bg);
+}

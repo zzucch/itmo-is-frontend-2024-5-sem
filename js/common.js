@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   gotoTopButton.style.right = "20px";
   gotoTopButton.style.display = "none";
   gotoTopButton.style.zIndex = 1100;
+  gotoTopButton.className = "goto-top-button";
 
   document.body.appendChild(gotoTopButton);
 
