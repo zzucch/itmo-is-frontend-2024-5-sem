@@ -42,42 +42,24 @@ function addSpecifications(event) {
   document.getElementById("value").value = "";
 }
 
+function deletePhone(index) {
+  const phones = JSON.parse(localStorage.getItem("phones")) || [];
+
+  phones.splice(index, 1);
+  localStorage.setItem("phones", JSON.stringify(phones));
+
+  loadPhonesFromLocalStorage();
+}
+
 function confirmListing() {
   const rows = document.querySelectorAll("#table-container .row");
 
   const phoneDetails = {};
-  const phoneEntry = document.createElement("div");
-  phoneEntry.className = "final-phone";
-
   rows.forEach((row) => {
     const key = row.querySelector(".key").textContent;
     const value = row.querySelector(".value").textContent;
-
-    const detailRow = document.createElement("div");
-    detailRow.className = "row";
-
-    const keyDiv = document.createElement("div");
-    keyDiv.className = "key";
-    keyDiv.textContent = key;
-
-    const valueDiv = document.createElement("div");
-    valueDiv.className = "value";
-    valueDiv.textContent = value;
-
-    detailRow.appendChild(keyDiv);
-    detailRow.appendChild(valueDiv);
-    phoneEntry.appendChild(detailRow);
-
     phoneDetails[key] = value;
   });
-
-  const finalTableContainer = document.getElementById("final-table-container");
-
-  if (finalTableContainer.style.display === "none") {
-    finalTableContainer.style.display = "block";
-  }
-
-  finalTableContainer.appendChild(phoneEntry);
 
   const phones = JSON.parse(localStorage.getItem("phones")) || [];
   phones.push(phoneDetails);
@@ -95,11 +77,15 @@ function confirmListing() {
   currentSpecificationIndex = 0;
   document.getElementById("specification-display").textContent =
     specifications[currentSpecificationIndex];
+
+  loadPhonesFromLocalStorage();
 }
 
 function loadPhonesFromLocalStorage() {
   const phones = JSON.parse(localStorage.getItem("phones")) || [];
   const finalTableContainer = document.getElementById("final-table-container");
+
+  finalTableContainer.innerHTML = "";
 
   if (phones.length === 0) {
     finalTableContainer.style.display = "none";
@@ -108,7 +94,7 @@ function loadPhonesFromLocalStorage() {
 
   finalTableContainer.style.display = "block";
 
-  phones.forEach((phone) => {
+  phones.forEach((phone, index) => {
     const phoneEntry = document.createElement("div");
     phoneEntry.className = "final-phone";
 
@@ -131,6 +117,12 @@ function loadPhonesFromLocalStorage() {
       phoneEntry.appendChild(detailRow);
     }
 
+    const deleteButton = document.createElement("button");
+    deleteButton.className = "delete-button";
+    deleteButton.textContent = "Delete";
+    deleteButton.onclick = () => deletePhone(index);
+
+    phoneEntry.appendChild(deleteButton);
     finalTableContainer.appendChild(phoneEntry);
   });
 }
