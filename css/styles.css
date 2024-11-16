@@ -847,3 +847,9 @@ input[type="number"] {
     align-items: center;
     gap: 20px;
 }
+
+.final-phone {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}

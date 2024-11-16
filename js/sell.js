@@ -48,8 +48,6 @@ function confirmListing() {
   const phoneDetails = {};
   const phoneEntry = document.createElement("div");
   phoneEntry.className = "final-phone";
-  phoneEntry.style.cssText =
-    "border: 1px solid #ddd; padding: 10px; margin-bottom: 10px;";
 
   rows.forEach((row) => {
     const key = row.querySelector(".key").textContent;
@@ -93,6 +91,7 @@ function confirmListing() {
   document.getElementById("table-container").innerHTML = "";
   document.getElementById("add-specification-form").style.display = "block";
   document.getElementById("submit-button").style.display = "none";
+
   currentSpecificationIndex = 0;
   document.getElementById("specification-display").textContent =
     specifications[currentSpecificationIndex];
@@ -112,8 +111,6 @@ function loadPhonesFromLocalStorage() {
   phones.forEach((phone) => {
     const phoneEntry = document.createElement("div");
     phoneEntry.className = "final-phone";
-    phoneEntry.style.cssText =
-      "border: 1px solid #ddd; padding: 10px; margin-bottom: 10px;";
 
     for (const key in phone) {
       const value = phone[key];
