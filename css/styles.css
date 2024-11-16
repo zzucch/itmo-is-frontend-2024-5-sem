@@ -70,10 +70,12 @@ body {
 }
 
 h2 {
+    padding-left: 1%;
     font-size: 4rem;
 }
 
 h3 {
+    padding-left: 1%;
     font-size: 2rem;
 }
 
@@ -702,4 +704,146 @@ footer section {
 .goto-top-button:hover {
     background-color: var(--text-dark);
     color: var(--bg);
+}
+
+.table-container,
+.final-table-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid var(--border);
+    padding-block: 2%;
+    padding-left: 15%;
+    padding-right: 15%;
+    background-color: var(--bg);
+}
+
+.final-table-container {
+    display: none;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    padding: 5px 0;
+}
+
+.row:last-child {
+    border-bottom: none;
+}
+
+.key {
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+.value {
+    color: var(--text-light);
+    text-align: right;
+}
+
+.add-specifications-button {
+    display: block;
+    margin: 10px auto;
+    position: relative;
+    background-color: var(--text-dark);
+    color: var(--bg);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0.3125em;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.add-specifications-button:hover {
+    background-color: var(--text);
+    color: var(--bg);
+}
+
+
+#submit-button {
+    display: none;
+    margin: 10px auto;
+    position: relative;
+    background-color: var(--text-dark);
+    color: var(--bg);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0.3125em;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#submit-button:hover {
+    background-color: var(--text);
+    color: var(--bg);
+}
+
+#success-message {
+    display: none;
+    color: green;
+    font-weight: bold;
+    margin: 2%;
+    font-size: 1.2em;
+    padding: 1%;
+    border: 2px solid green;
+    background-color: #f0f8f0;
+    border-radius: 0.5em;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 0.625em;
+    font-size: 1em;
+    width: 15.625em;
+    border: 0.0625em solid var(--newsletter-border);
+    border-radius: 0.3125em;
+    background-color: var(--light);
+    color: var(--text-dark);
+}
+
+
+.current-specification {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.input-field {
+    padding: 0.625em;
+    font-size: 1em;
+    width: 15.625em;
+    border: 0.0625em solid var(--newsletter-border);
+    border-radius: 0.3125em;
+    background-color: var(--light);
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.label-specification,
+.label-value {
+    font-size: 1em;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#add-specification-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }

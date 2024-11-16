@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<script src="../js/load_speed.js"></script>
-<h2>under construction...</h2>
-<a href="../index.html">go to the homepage</a>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-
 <head>
     <meta charset="UTF-8">
     <title>Sell - The Phone Marketplace</title>
@@ -13,6 +8,7 @@
     <meta name="description" content="Buy and sell your phones in our online store">
     <link rel="stylesheet" href="../css/styles.css">
     <script src="../js/common.js"></script>
+    <script src="../js/sell.js" defer></script>
 </head>
 
 <body>
@@ -31,24 +27,29 @@
 
     <main>
         <section class="sell">
-            <h2>Sell Your Phone</h2>
-            <p>Have an phone you don't need? List it on our marketplace and get offers
-                from potential buyers!</p>
-            <form action="#" method="post" class="sell-form">
-                <label for="phone-name">Phone model name:</label>
-                <input type="text" id="phone-name" name="phone-name" required>
+            <h2>Selling your phone</h2>
+            <h3>Provide specifications for the phone you want to sell</h3>
 
-                <label for="price">Price:</label>
-                <input type="number" id="price" name="price" required>
+            <div id="success-message">Your phone has been successfully listed for sale!</div>
 
-                <label for="description">Description:</label>
-                <textarea id="description" name="description" rows="4" required></textarea>
+            <form id="add-specification-form">
+                <div class="form-container">
+                    <label for="specification" class="label-specification">Specification:</label>
+                    <div id="specification-display" class="current-specification"></div>
 
-                <label for="image-upload">Upload an image of your phone:</label>
-                <input type="file" id="image-upload" name="image-upload" accept="image/*" required>
-
-                <button type="submit">List Phone for Sale</button>
+                    <label for="value" class="label-value">Enter the value:</label>
+                    <input type="text" id="value" name="value" required class="input-field">
+                </div>
+                <button type="submit" class="add-specifications-button">Add to specifications</button>
             </form>
+
+            <div id="table-container" class="table-container"></div>
+
+            <button id="submit-button">Confirm Listing</button>
+
+            <div id="final-table-container" class="final-table-container">
+                <h3>Phones listed for sale</h3>
+            </div>
         </section>
     </main>
 
