@@ -869,3 +869,47 @@ input[type="number"] {
     background-color: var(--text);
     color: var(--bg);
 }
+
+.preloader {
+    transform: scale(0.75);
+    display: none;
+    text-align: center;
+}
+
+.preloader-animation {
+    animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(-45deg);
+    }
+
+    to {
+        transform: rotate(45deg);
+    }
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.load-reviews-button {
+    display: block;
+    margin: 2em auto;
+    padding: 1% 2%;
+    border: 1px solid var(--text-dark);
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: var(--bg);
+    color: var(--text-dark);
+}
+
+.load-reviews-button:hover {
+    background-color: var(--text-dark);
+    color: var(--bg);
+}
